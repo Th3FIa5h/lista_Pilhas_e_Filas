@@ -2,11 +2,11 @@
 
 ## Exercício 1 - Implementar a estrutura da Pilha baseada em vetores, devendo possuir os métodos que:
 
-1) inserir ao topo (empilhar)
+1) inserir ao topo (empilhar) - Feito
 
-2) remover do topo (desempilhar)
+2) remover do topo (desempilhar) - Feito
 
-3) verificar se a pilha está vazia
+3) verificar se a pilha está vazia - Feito
 
  
 ## Exercício 2 - A partir da implementação da pilha, você deverá desenvolver um algoritmo que simule um desfazer/refazer de um editor de texto, que funciona da seguinte forma:

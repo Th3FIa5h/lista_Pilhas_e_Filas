@@ -2,46 +2,46 @@ package estruturas;
 
 public class PilhaVetor {
 
-    private int[] elementos;
+    private String[] elementos;
     private int topo;
     private int capacidade;
 
 
     public PilhaVetor(){
         this.capacidade = 10;
-        this.elementos = new int[this.capacidade];
+        this.elementos = new String[this.capacidade];
         this.topo = -1;
-    }
+    }    
 
-    private void aumentarCapacidade() {
-        int novaCapacidade = capacidade * 2;
-        int[] novoVetor = new int[novaCapacidade];
-    
-        for (int i = 0; i < capacidade; i++) {
-            novoVetor[i] = elementos[i];
-        }
-    
-        elementos = novoVetor;
-        capacidade = novaCapacidade;
-    }
-    
 
-    public void empilhar(int elemento){
-        if(topo >= capacidade - 1) {
-            aumentarCapacidade();
-        }
+    // Exercício 1-1 - Empilhar
+    public void empilhar(String elemento){
         topo++;
         elementos[topo] = elemento;
     }
 
-    public int desempilhar() {
+    //Exercício 1-2 - Desempilhar
+    public String desempilhar() {
         if (topo >= 0) {
-        int elemento = elementos[topo];
+        String elemento = elementos[topo];
         topo --;
         return elemento;
         }else {
         throw new IllegalStateException("Pilha está vazia");
         }
     }
-    
+
+    //Exercício 1-3 - Verificar Pilha Vazia
+    public void estaVazia(){
+        if(topo <= 0){
+            System.out.println("A pilha está vazia");
+        }
+        else{
+            System.out.println("A pilha não está vazia");
+        }
+    }
+
+    public void limpar(){
+        topo = -1;
+    }
 }
