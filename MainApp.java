@@ -1,4 +1,5 @@
 import estruturas.EditorTextoPilha;
+import estruturas.Fila;
 import estruturas.PilhaVetor;
 
 public class MainApp
