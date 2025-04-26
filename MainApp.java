@@ -1,5 +1,7 @@
+import estruturas.Documento;
 import estruturas.EditorTextoPilha;
 import estruturas.Fila;
+import estruturas.FilaImpressao;
 import estruturas.PilhaVetor;
 
 public class MainApp
@@ -57,10 +59,19 @@ public class MainApp
 
         //Exercício 3-3 - Verificar Pilha Vazia
         fila.estaVazia();
-        
         fila.desenfileirar();
         fila.imprimirFila();
         fila.desenfileirar();
         fila.estaVazia();
+
+        //Exercício 4 - Fila de Impressão e Documento 
+        FilaImpressao filadeimpressao = new FilaImpressao(5);
+        filadeimpressao.adicionarDocumento(new Documento("cardapiorestaurante.pdf", 1500));
+        filadeimpressao.adicionarDocumento(new Documento("inventarioempresa.xslx", 50000));
+        filadeimpressao.adicionarDocumento(new Documento("listadecompras.png", 350));
+        filadeimpressao.mostrarFila();
+        filadeimpressao.imprimirProximo();
+        filadeimpressao.imprimirProximo();
+        filadeimpressao.mostrarFila();
     }
 }
